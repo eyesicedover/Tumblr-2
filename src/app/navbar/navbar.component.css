@@ -14,3 +14,7 @@ input {
   background-color: rgba(0, 0, 0, 0.13);
   border: none;
 }
+
+#home {
+  height: 35px;
+}
