@@ -1,10 +1,16 @@
-<div class="card card-body" *ngFor="let post of childPostList;">
-  <p><b>{{post.followed}}</b></p>
-  <div *ngIf="post.type === 'text'">
-    <hr>
-    {{post.content}}
-  </div>
-  <div *ngIf="post.type === 'video'" >
-    <iframe width="560" height="315" src="bypassSecurityTrustResourceUrl(post.content)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div  *ngFor="let post of childPostList;">
+  <div class="card card-body">
+    <p><b>{{post.followed}}</b></p>
+    <div *ngIf="post.type === 'text'">
+      <hr>
+      {{post.content}}
+    </div>
+    <div *ngIf="post.type === 'video'" >
+      <br>
+      {{post.content}}
+      <!-- <iframe width="560" height="315" src="bypassSecurityTrustResourceUrl(post.content)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+    </div>
+    <br>
+    <p id="source">Source: {{post.creator}}</p>
   </div>
 </div>

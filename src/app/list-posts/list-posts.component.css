@@ -1,3 +1,16 @@
 p {
   margin-bottom: 0px;
 }
+
+hr {
+  margin: .75em;
+  min-width: 100%;
+}
+
+#source {
+  color: rgb(143, 143, 143);
+}
+
+.card {
+  margin-bottom: 20px;
+}
