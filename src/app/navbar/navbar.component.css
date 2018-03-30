@@ -1,0 +1,16 @@
+.navbar {
+  height: 50px;
+}
+
+.bg-custom {
+  background-color: #36465d;
+}
+
+img {
+  max-height: 50px;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0.13);
+  border: none;
+}
