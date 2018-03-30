@@ -8,4 +8,5 @@ import { Post } from '../models/post.model';
 })
 export class ListPostsComponent {
   @Input() childPostList: Post[];
+
 }

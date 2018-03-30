@@ -1,3 +1,12 @@
-<p>
-  list-posts works!
-</p>
+<div class="card card-body" *ngFor="let post of childPostList">
+  <p><b>{{post.followed}}</b></p>
+  <div *ngIf="post.type === 'text'">
+    <hr>
+    {{post.content}}
+  </div>
+  <div *ngIf="post.type === 'video'" >
+    <div ng-bind-html="{{post.content}}">
+    {{ post.content}}
+    </div>
+  </div>
+</div>
