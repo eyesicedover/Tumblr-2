@@ -5,6 +5,7 @@
     {{post.content}}
   </div>
   <div *ngIf="post.type === 'video'" >
-    {{ post.content}}
+    <iframe width="560" height="315" src="post.content" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    {{post.content}}
   </div>
 </div>
