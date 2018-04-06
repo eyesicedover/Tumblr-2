@@ -1,15 +1,26 @@
 <div  *ngFor="let post of childPostList;">
-  <div class="card card-body post">
-    <p class="post"><b>{{post.followed}}</b></p>
+  <div class="card">
+    <p class="post source" id="followed"><b>{{post.followed}}</b></p>
     <div class="post" *ngIf="post.type === 'text'">
-      <hr>
       {{post.content}}
     </div>
-    <div class="post" *ngIf="post.type === 'video'" >
+    <div class="card-body post">
+      <div class="post wrapper" *ngIf="post.type === 'video'" >
+        <br>
+        <iframe [src]="cleanURL(post.content)" frameborder="0" allow="encrypted-media" id="embedded"></iframe>
+      </div>
+      <div class="post" *ngIf="post.type === 'quote'" >
+        <br>
+        <h1>"{{post.content}}"</h1>
+        <p>— {{post.quoted}}</p>
+      </div>
       <br>
-      <iframe width="560" height="315" [src]="cleanURL(post.content)" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+      <p class="post source" id="source">Source: {{post.creator}}</p>
     </div>
-    <br>
-    <p class="post" id="source">Source: {{post.creator}}</p>
+    <footer>
+      <div class="post">
+        <img src="https://image.ibb.co/jB0EsH/badlike.png" alt="like" class="footerIcons"><img src="http://socialmediaweek.org/wp-content/blogs.dir/1/files/2015/07/reblog.png" alt="reblog" class="footerIcons"id="reblog">
+      </div>
+    </footer>
   </div>
 </div>

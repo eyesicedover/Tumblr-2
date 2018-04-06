@@ -7,16 +7,63 @@ hr {
   min-width: 100%;
 }
 
+h1 {
+  font-family: Georgia, serif;
+}
+
+footer {
+  height: 50px;
+  min-width: 100%;
+  border-top: 1px solid rgb(150,150,150) !important;
+}
+
+.footerIcons {
+  display: block;
+  height: 25px;
+  float: right;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card {
+  margin-bottom: 25px;
+  font-size: 1.15em;
+}
+
+.card, .card-body {
+  padding-bottom: 0px;
+}
+
+.post {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.source {
+  color: #8f8f8f;
+}
+
+.wrapper {
+  display: flex;
+  align-items:center;
+  padding: 0px;
+}
+
 #source {
   color: rgb(143, 143, 143);
 }
 
-.card {
-  margin-bottom: 20px;
-  font-size: 1.15em;
+#embedded {
+  width:60vw;
+  height: 40vw;
+  vertical-align: middle;
+  margin:0 auto;
 }
 
-.post {
-  padding-left: 15px;
-  padding-right: 15px;
+#followed {
+  padding-top: 17px;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
+  border-bottom: 1px solid rgb(225,225,225) !important;
 }
