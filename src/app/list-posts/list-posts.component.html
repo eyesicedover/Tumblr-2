@@ -14,9 +14,11 @@
         <h1>"{{post.content}}"</h1>
         <p>— {{post.quoted}}</p>
       </div>
-      <br>
-      <p class="post source" id="source">Source: {{post.creator}}</p>
+      <div class="post" *ngIf"post.type === 'chat'" [innerHTML]="cleanChat(post.content)">
+      </div>
     </div>
+    <br>
+    <p class="post source" id="source">Source: {{post.creator}}</p>
     <footer>
       <div class="post">
         <img src="https://image.ibb.co/jB0EsH/badlike.png" alt="like" class="footerIcons"><img src="http://socialmediaweek.org/wp-content/blogs.dir/1/files/2015/07/reblog.png" alt="reblog" class="footerIcons"id="reblog">
