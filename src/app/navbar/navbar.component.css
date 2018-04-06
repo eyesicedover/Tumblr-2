@@ -1,5 +1,6 @@
 .navbar {
-  height: 50px;
+  height: 70px;
+  box-shadow: 0 0 0 1px hsla(0,0%,100%,.13);
 }
 
 .bg-custom {
@@ -7,12 +8,13 @@
 }
 
 img {
-  max-height: 50px;
+  max-height: 70px;
 }
 
 input {
   background-color: rgba(0, 0, 0, 0.13);
   border: none;
+  height: 40px;
 }
 
 #home {
