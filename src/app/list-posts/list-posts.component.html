@@ -8,7 +8,7 @@
     <div *ngIf="post.type === 'video'" >
       <br>
       {{post.content}}
-      <!-- <iframe width="560" height="315" src="bypassSecurityTrustResourceUrl(post.content)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+      <iframe width="560" height="315" [src]="cleanURL(post.content)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     <br>
     <p id="source">Source: {{post.creator}}</p>

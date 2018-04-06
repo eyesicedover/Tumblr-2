@@ -1,4 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+
 import { Post } from '../models/post.model';
 
 @Component({
@@ -6,7 +8,13 @@ import { Post } from '../models/post.model';
   templateUrl: './list-posts.component.html',
   styleUrls: ['./list-posts.component.css']
 })
-export class ListPostsComponent {
+export class ListPostsComponent  {
+  constructor(private sanitizer: DomSanitizer) {}
+
   @Input() childPostList: Post[];
+
+  cleanURL(unsafeURL) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(unsafeURL);
+  }
 
 }
