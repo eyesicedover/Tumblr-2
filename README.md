@@ -5,7 +5,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
-##Description
+## Description
 
 This project is an attempt to recreate the Tumblr blogging website using Node, npm, and Angular. The user will be able to post text, video, link, quote, chat, audio, and photo posts.
 
