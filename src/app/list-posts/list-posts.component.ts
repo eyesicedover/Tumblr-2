@@ -18,7 +18,6 @@ export class ListPostsComponent  {
   }
 
   cleanChat(unsafeChat) {
-    // return this.sanitizer.bypassSecurityTrustHtml(unsafeChat);
-    return this.sanitizer.bypassSecurityTrustStyle(unsafeChat);
+    return this.sanitizer.bypassSecurityTrustHtml(unsafeChat);
   }
 }

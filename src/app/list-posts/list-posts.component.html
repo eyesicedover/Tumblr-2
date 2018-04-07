@@ -5,20 +5,21 @@
       {{post.content}}
     </div>
     <div class="card-body post">
-      <div class="post wrapper" *ngIf="post.type === 'video'" >
+      <div class="post wrapper" *ngIf="post.type === 'video'">
         <br>
         <iframe [src]="cleanURL(post.content)" frameborder="0" allow="encrypted-media" id="embedded"></iframe>
       </div>
-      <div class="post" *ngIf="post.type === 'quote'" >
+      <div class="post" *ngIf="post.type === 'quote'">
         <br>
         <h1>"{{post.content}}"</h1>
         <p>— {{post.quoted}}</p>
       </div>
-      <div class="post" *ngIf"post.type === 'chat'" [innerHTML]="cleanChat(post.content)">
+      <div class="post" *ngIf="post.type === 'chat'">
+        <p [innerHTML]="cleanChat(post.content)"> </p>
       </div>
+      <br>
+      <p class="post source" id="source">Source: {{post.creator}}</p>
     </div>
-    <br>
-    <p class="post source" id="source">Source: {{post.creator}}</p>
     <footer>
       <div class="post">
         <img src="https://image.ibb.co/jB0EsH/badlike.png" alt="like" class="footerIcons"><img src="http://socialmediaweek.org/wp-content/blogs.dir/1/files/2015/07/reblog.png" alt="reblog" class="footerIcons"id="reblog">
