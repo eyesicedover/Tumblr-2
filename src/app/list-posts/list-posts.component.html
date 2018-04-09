@@ -3,7 +3,12 @@
     <p class="post source" id="followed"><b>{{post.followed}}</b></p>
     <div class="card-body post">
       <div class="post" *ngIf="post.type === 'text'">
-        {{post.content}}
+        <p>{{post.content}}</p>
+        <div *ngIf="post.opComment !== 'none'">
+          <hr>
+          Comment:
+          <p class="tab">{{post.opComment}}</p>
+        </div>
       </div>
       <div class="post wrapper" *ngIf="post.type === 'video'">
         <br>
@@ -12,10 +17,16 @@
       <div class="post" *ngIf="post.type === 'quote'">
         <br>
         <h1>"{{post.content}}"</h1>
-        <p>— {{post.quoted}}</p>
+        <p>— {{post.opComment}}</p>
       </div>
       <div class="post" *ngIf="post.type === 'chat'">
         <p [innerHTML]="cleanChat(post.content)"> </p>
+      </div>
+      <div class="post wrapper" *ngIf="post.type === 'audio'">
+        <iframe [src]="cleanURL(post.content)" frameborder="0" allowtransparency="true" allow="encrypted-media" id="embedded"></iframe>
+      </div>
+      <div class="post wrapper" *ngIf="post.type === 'link'">
+        <a href="cleanURL(post.content)"><h3>{{post.opComment}}</h3></a>
       </div>
       <br>
     </div>

@@ -2,13 +2,14 @@ p {
   margin-bottom: 0px;
 }
 
-hr {
-  margin: .75em;
-  min-width: 100%;
-}
-
 h1 {
   font-family: Georgia, serif;
+}
+
+hr {
+  margin-left: -40px;
+  margin-right: -40px;
+  border-color: #e1e1e1;
 }
 
 footer {
@@ -48,6 +49,10 @@ footer {
   display: flex;
   align-items:center;
   padding: 0px;
+}
+
+.tab {
+  margin-left: 20px;
 }
 
 #source {

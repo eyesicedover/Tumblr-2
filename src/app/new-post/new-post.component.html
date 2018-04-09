@@ -1,16 +1,13 @@
 
 <div class="card card-body newPostIcons">
-  <img src="https://image.ibb.co/dszahH/text.png" alt="post text">
-  <hr>
-  <img src="https://image.ibb.co/fyWAGc/picture.png" alt="post picture">
-  <hr>
-  <img src="https://image.ibb.co/dBMcwc/quote.png" alt="post quote">
-  <hr>
-  <img src="https://image.ibb.co/c0Hjbc/link.png" alt="post link">
-  <hr>
-  <img src="https://image.ibb.co/e2BXUx/chat.png" alt="post chat">
-  <hr>
-  <img src="https://image.ibb.co/bRLgNH/audio.png" alt="post audio">
-  <hr>
-  <img src="https://image.ibb.co/injmpx/Layer_1.png" alt="post video">
+  <img src="https://image.ibb.co/dszahH/text.png" alt="post text" (click)="makeNewPostClicked('text')">
+  <img src="https://image.ibb.co/fyWAGc/picture.png" alt="post picture" (click)="makeNewPostClicked('picture')">
+  <img src="https://image.ibb.co/dBMcwc/quote.png" alt="post quote" (click)="makeNewPostClicked('quote')">
+  <img src="https://image.ibb.co/c0Hjbc/link.png" alt="post link" (click)="makeNewPostClicked('link')">
+  <img src="https://image.ibb.co/e2BXUx/chat.png" alt="post chat" (click)="makeNewPostClicked('chat')">
+  <img src="https://image.ibb.co/bRLgNH/audio.png" alt="post audio" (click)="makeNewPostClicked('audio')">
+  <img src="https://image.ibb.co/injmpx/Layer_1.png" alt="post video" (click)="makeNewPostClicked('video')">
+</div>
+<div class="card card-body" *ngIf="makeNewPost === true">
+
 </div>
